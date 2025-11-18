@@ -30,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="80dp"
-            android:hint="Email ou usuário"
+            android:hint="@string/email_ou_usu_rio"
             android:theme="@style/ThemeOverlay.App.TextInputLayout"
             android:layout_marginStart="40dp"
             android:layout_marginEnd="40dp"
@@ -56,7 +56,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:hint="Senha"
+            android:hint="@string/senha"
             android:theme="@style/ThemeOverlay.App.TextInputLayout"
             android:layout_marginStart="40dp"
             android:layout_marginEnd="40dp"
@@ -98,7 +98,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Lembrar de mim"
+                android:text="@string/lembrar_de_mim"
                 android:textColor="@color/white"
                 android:textSize="16sp" />
         </LinearLayout>
@@ -118,6 +118,7 @@
         android:layout_height="350dp"
         android:src="@drawable/logo"
         android:layout_marginTop="-20dp"
+        android:contentDescription="Logo do aplicativo SyncMeet"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>

@@ -19,6 +19,7 @@
 
         <!-- 3. Definimos a cor do rótulo flutuante para cinza -->
         <item name="hintTextColor">#A0A0A0</item>
+        <item name="android:fontFamily">@font/open_sans_bold</item>
     </style>
 
     <!-- res/values/themes.xml --><!-- Adicione este estilo -->
@@ -35,7 +36,7 @@
         Note que o parent está vazio, ele é um estilo "puro".
     -->
     <style name="Widget.App.TextInputEditText.Padding" parent="">
-        <item name="android:paddingStart">4dp</item>
+        <item name="android:paddingStart">40dp</item>
         <item name="android:paddingEnd">4dp</item>
     </style>
 

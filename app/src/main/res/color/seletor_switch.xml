@@ -1,9 +1,9 @@
 <!-- res/color/seletor_switch.xml -->
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- Quando o switch está LIGADO (checked="true"), fica roxo -->
+    <!-- LIGADO -->
     <item android:color="@color/roxo_claro" android:state_checked="true" />
 
-    <!-- Estado padrão (DESLIGADO), fica cinza/transparente -->
-    <item android:color="#4DFFFFFF" />
+    <!-- Estado DESLIGADO -->
+    <item android:color="#000000" />
 </selector>
     

@@ -117,7 +117,7 @@ l
                 android:id="@+id/esqueceu_senha"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Esqueceu a senha?"
+                android:text="@string/esqueceu_a_senha"
                 android:textColor="#A78BFA"
                 android:textSize="13sp"
                 android:fontFamily="@font/open_sans_regular"
@@ -136,7 +136,7 @@ l
             android:layout_marginEnd="105dp"
             android:layout_marginTop="39dp"
             android:padding="12dp"
-            android:text="Login"
+            android:text="@string/login"
             android:textColor="@color/white"
             android:textSize="16sp"
             app:backgroundTint="#8b5cf6"
@@ -145,7 +145,7 @@ l
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Criar nova conta"
+            android:text="@string/criar_nova_conta"
             android:textColor="#a78bfa"
             android:textSize="13sp"
             android:fontFamily="@font/open_sans_regular"/>

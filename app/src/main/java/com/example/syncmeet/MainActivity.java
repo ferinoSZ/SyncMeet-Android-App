@@ -5,7 +5,7 @@ package com.example.syncmeet;
 
 import android.os.Bundle;
 
-import android.widget.TextView; // Importe a classe TextView
+
 import androidx.appcompat.app.AppCompatActivity;
 
 // ... outros imports

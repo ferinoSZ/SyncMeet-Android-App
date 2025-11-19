@@ -8,7 +8,22 @@
     tools:context=".MainActivity"
     android:background="@drawable/bg_gradiente">
 
+    <ImageView
+        android:id="@+id/image_logo"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+
+
+        android:layout_marginBottom="-135dp"
+        android:elevation="1dp"
+        android:contentDescription="@string/logo_do_aplicativo_syncmeet"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toTopOf="@+id/container"
+        app:layout_constraintEnd_toEndOf="@+id/container"
+        app:layout_constraintStart_toStartOf="@+id/container"/>
+
     <LinearLayout
+        android:id="@+id/container"
         android:layout_width="350dp"
         android:layout_height="475dp"
         android:background="@drawable/container_borda"
@@ -39,13 +54,14 @@
             app:startIconDrawable="@drawable/ic_email"
             app:startIconTint="@color/white">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/email_edit_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
-            android:maxLines="1"
-            android:textColor="#FFFFFF" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:textSize="13dp"
+                android:maxLines="1"
+                android:textColor="#FFFFFF" />
         </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -60,18 +76,21 @@
             android:theme="@style/ThemeOverlay.App.TextInputLayout"
             android:layout_marginStart="60dp"
             android:layout_marginEnd="100dp"
+            app:endIconMode="password_toggle"
+            app:endIconTint="@color/white"
             app:boxStrokeColor="@color/input_line_color"
             app:boxStrokeWidth="1dp"
             app:startIconDrawable="@drawable/ic_cadeado"
             app:startIconTint="@color/white">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/password_edit_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:maxLines="1"
-            android:textColor="#FFFFFF" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:textSize="13dp"
+                android:maxLines="1"
+                android:textColor="#FFFFFF" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -141,35 +160,22 @@
             app:backgroundTint="#8b5cf6"
             app:cornerRadius="29dp" />
 
+        <!-- Criar Nova Conta -->
         <TextView
+            android:id="@+id/criar_nova_conta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/criar_nova_conta"
             android:textColor="#a78bfa"
             android:textSize="13sp"
-            android:fontFamily="@font/open_sans_regular"/>
+            android:fontFamily="@font/open_sans_regular"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="150dp"/>
 
 
 
 
     </LinearLayout>
 
-
-
-
-
-
-
-
-<ImageView
-        android:id="@+id/image_logo"
-        android:layout_width="350dp"
-        android:layout_height="350dp"
-        android:src="@drawable/logo"
-        android:layout_marginTop="7dp"
-        android:contentDescription="Logo do aplicativo SyncMeet"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

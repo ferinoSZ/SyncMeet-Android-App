@@ -2,58 +2,42 @@
 
 package com.example.syncmeet;
 
-import androidx.appcompat.app.AppCompatActivity;
-import android.graphics.Paint; // Importe a classe Paint
+import android.content.Intent; // Importe a classe Intent
 import android.os.Bundle;
-import android.view.MotionEvent; // Importe a classe MotionEvent
 import android.view.View;
-import android.widget.TextView;
-import android.widget.Toast;
+import android.widget.TextView; // Importe a classe TextView
+import androidx.appcompat.app.AppCompatActivity;
+
+// ... outros imports
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView forgotPasswordTextView;
-    // ... suas outras declarações
+    private TextView criarContaTextView; // Declare a variável
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main); // Garanta que este é o layout da tela de login
 
-        // 1. Encontre o TextView pelo ID
-        forgotPasswordTextView = findViewById(R.id.esqueceu_senha);
+        // ... (seu código existente para injetar o layout, etc.)
 
-        // 2. Configure o "Ouvinte de Toque"
-        // O JEITO NOVO (E SEM AVISOS)
-        forgotPasswordTextView.setOnTouchListener((v, event) -> {
-            // Converte a View 'v' de volta para um TextView para facilitar
-            TextView textView = (TextView) v;
+        // 1. Encontre o TextView pelo ID que você acabou de adicionar
+        criarContaTextView = findViewById(R.id.criar_nova_conta);
 
-            switch (event.getAction()) {
-                case MotionEvent.ACTION_DOWN:
-                    // AÇÃO QUANDO O USUÁRIO PRESSIONA O DEDO:
-                    // Adiciona a "flag" de sublinhado ao texto
-                    textView.setPaintFlags(textView.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
-                    break;
+        // 2. Defina a ação de clique
+        criarContaTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Este código será executado quando o texto for clicado
 
-                case MotionEvent.ACTION_UP:
-                    // AÇÃO QUANDO O USUÁRIO SOLTA O DEDO:
-                    // Remove a "flag" de sublinhado
-                    textView.setPaintFlags(textView.getPaintFlags() & (~Paint.UNDERLINE_TEXT_FLAG));
+                // Crie uma "intenção" (Intent) para ir da tela atual para a CriarContaActivity
+                Intent intent = new Intent(MainActivity.this, CriarContaActivity.class);
 
-                    // Execute a ação de clique aqui, quando o usuário solta o dedo
-                    Toast.makeText(MainActivity.this, "Função desativada pelos desenvolvedores do aplicativo SyncMeet", Toast.LENGTH_SHORT).show();
-                    break;
-
-                case MotionEvent.ACTION_CANCEL:
-                    // AÇÃO SE O TOQUE FOR CANCELADO (ex: arrastar o dedo para fora):
-                    // Garante que o sublinhado seja removido
-                    textView.setPaintFlags(textView.getPaintFlags() & (~Paint.UNDERLINE_TEXT_FLAG));
-                    break;
+                // Inicie a nova Activity
+                startActivity(intent);
             }
-            // Retorna 'true' para indicar que o evento de toque foi consumido aqui
-            return true;
         });
 
+        // ... (seu outro código para o botão de senha, etc.)
     }
 }

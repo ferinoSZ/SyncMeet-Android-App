@@ -12,8 +12,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView criarContaTextView; // Declare a variável
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,7 +20,8 @@ public class MainActivity extends AppCompatActivity {
         // ... (seu código existente para injetar o layout, etc.)
 
         // 1. Encontre o TextView pelo ID que você acabou de adicionar
-        criarContaTextView = findViewById(R.id.criar_nova_conta);
+        // Declare a variável
+        TextView criarContaTextView = findViewById(R.id.criar_nova_conta);
 
         // 2. Defina a ação de clique
         criarContaTextView.setOnClickListener(new View.OnClickListener() {

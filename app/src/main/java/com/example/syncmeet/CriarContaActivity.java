@@ -7,7 +7,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.os.Bundle;
 import android.text.TextUtils; // Importante para verificar strings vazias
 import android.view.MenuItem;
-
+import android.view.View; // Importante para o OnClickListener
 import android.widget.Toast; // Para mostrar mensagens
 
 import com.google.android.material.button.MaterialButton;
@@ -21,6 +21,7 @@ public class CriarContaActivity extends AppCompatActivity {
     // 1. Declare as variáveis para os componentes do layout
     private TextInputLayout emailLayout, usuarioLayout, senhaLayout, confirmarSenhaLayout;
     private TextInputEditText emailEditText, usuarioEditText, senhaEditText, confirmarSenhaEditText;
+    private MaterialButton registerButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,10 +48,16 @@ public class CriarContaActivity extends AppCompatActivity {
         senhaEditText = findViewById(R.id.password_edittext_create);
         confirmarSenhaEditText = findViewById(R.id.confirm_password_edittext_create);
 
-        MaterialButton registerButton = findViewById(R.id.register_button);
+        registerButton = findViewById(R.id.register_button);
 
         // 3. Configure o "ouvinte" de clique para o botão de cadastrar
-
+        registerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Quando o botão for clicado, chame a nossa função de validação
+                validarCampos();
+            }
+        });
     }
 
     private void validarCampos() {
@@ -116,7 +123,7 @@ public class CriarContaActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
-
+            onBackPressed();
             return true;
         }
         return super.onOptionsItemSelected(item);

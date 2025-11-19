@@ -100,7 +100,6 @@
                     android:checked="false"
                     app:thumbTint="@color/white"
                     app:trackTint="@color/seletor_switch" />
-l
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

@@ -50,13 +50,7 @@ public class CriarContaActivity extends AppCompatActivity {
         MaterialButton registerButton = findViewById(R.id.register_button);
 
         // 3. Configure o "ouvinte" de clique para o botão de cadastrar
-        registerButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Quando o botão for clicado, chame a nossa função de validação
-                validarCampos();
-            }
-        });
+
     }
 
     private void validarCampos() {
@@ -122,7 +116,6 @@ public class CriarContaActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
-            onBackPressed();
             return true;
         }
         return super.onOptionsItemSelected(item);

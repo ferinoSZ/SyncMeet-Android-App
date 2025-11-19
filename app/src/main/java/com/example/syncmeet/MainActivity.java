@@ -24,18 +24,7 @@ public class MainActivity extends AppCompatActivity {
         TextView criarContaTextView = findViewById(R.id.criar_nova_conta);
 
         // 2. Defina a ação de clique
-        criarContaTextView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Este código será executado quando o texto for clicado
 
-                // Crie uma "intenção" (Intent) para ir da tela atual para a CriarContaActivity
-                Intent intent = new Intent(MainActivity.this, CriarContaActivity.class);
-
-                // Inicie a nova Activity
-                startActivity(intent);
-            }
-        });
 
         // ... (seu outro código para o botão de senha, etc.)
     }

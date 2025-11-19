@@ -2,9 +2,9 @@
 
 package com.example.syncmeet;
 
-import android.content.Intent; // Importe a classe Intent
+
 import android.os.Bundle;
-import android.view.View;
+
 import android.widget.TextView; // Importe a classe TextView
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
 
         // 1. Encontre o TextView pelo ID que você acabou de adicionar
         // Declare a variável
-        TextView criarContaTextView = findViewById(R.id.criar_nova_conta);
 
         // 2. Defina a ação de clique
 

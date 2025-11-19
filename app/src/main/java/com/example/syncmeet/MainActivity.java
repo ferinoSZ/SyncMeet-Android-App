@@ -24,41 +24,36 @@ public class MainActivity extends AppCompatActivity {
         forgotPasswordTextView = findViewById(R.id.esqueceu_senha);
 
         // 2. Configure o "Ouvinte de Toque"
-        forgotPasswordTextView.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                // Converte a View 'v' de volta para um TextView para facilitar
-                TextView textView = (TextView) v;
+        // O JEITO NOVO (E SEM AVISOS)
+        forgotPasswordTextView.setOnTouchListener((v, event) -> {
+            // Converte a View 'v' de volta para um TextView para facilitar
+            TextView textView = (TextView) v;
 
-                switch (event.getAction()) {
-                    case MotionEvent.ACTION_DOWN:
-                        // AÇÃO QUANDO O USUÁRIO PRESSIONA O DEDO:
-                        // Adiciona a "flag" de sublinhado ao texto
-                        textView.setPaintFlags(textView.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
-                        break;
+            switch (event.getAction()) {
+                case MotionEvent.ACTION_DOWN:
+                    // AÇÃO QUANDO O USUÁRIO PRESSIONA O DEDO:
+                    // Adiciona a "flag" de sublinhado ao texto
+                    textView.setPaintFlags(textView.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+                    break;
 
-                    case MotionEvent.ACTION_UP:
-                        // AÇÃO QUANDO O USUÁRIO SOLTA O DEDO:
-                        // Remove a "flag" de sublinhado
-                        textView.setPaintFlags(textView.getPaintFlags() & (~Paint.UNDERLINE_TEXT_FLAG));
+                case MotionEvent.ACTION_UP:
+                    // AÇÃO QUANDO O USUÁRIO SOLTA O DEDO:
+                    // Remove a "flag" de sublinhado
+                    textView.setPaintFlags(textView.getPaintFlags() & (~Paint.UNDERLINE_TEXT_FLAG));
 
-                        // Execute a ação de clique aqui, quando o usuário solta o dedo
-                        Toast.makeText(MainActivity.this, "Função desativada pelos desenvolvedores do aplicativo SyncMeet", Toast.LENGTH_SHORT).show();
-                        // Aqui entraria o seu código para ir para outra tela (Activity)
-                        // Exemplo:
-                        // Intent intent = new Intent(MainActivity.this, ForgotPasswordActivity.class);
-                        // startActivity(intent);
-                        break;
+                    // Execute a ação de clique aqui, quando o usuário solta o dedo
+                    Toast.makeText(MainActivity.this, "Função desativada pelos desenvolvedores do aplicativo SyncMeet", Toast.LENGTH_SHORT).show();
+                    break;
 
-                    case MotionEvent.ACTION_CANCEL:
-                        // AÇÃO SE O TOQUE FOR CANCELADO (ex: arrastar o dedo para fora):
-                        // Garante que o sublinhado seja removido
-                        textView.setPaintFlags(textView.getPaintFlags() & (~Paint.UNDERLINE_TEXT_FLAG));
-                        break;
-                }
-                // Retorna 'true' para indicar que o evento de toque foi consumido aqui
-                return true;
+                case MotionEvent.ACTION_CANCEL:
+                    // AÇÃO SE O TOQUE FOR CANCELADO (ex: arrastar o dedo para fora):
+                    // Garante que o sublinhado seja removido
+                    textView.setPaintFlags(textView.getPaintFlags() & (~Paint.UNDERLINE_TEXT_FLAG));
+                    break;
             }
+            // Retorna 'true' para indicar que o evento de toque foi consumido aqui
+            return true;
         });
+
     }
 }

@@ -8,10 +8,7 @@
     android:background="@drawable/bg_gradiente"
     tools:context=".CriarContaActivity">
 
-    <!--
-        PASSO 1: A TOOLBAR AGORA É TRANSPARENTE.
-        Ela serve apenas como um "cabide" invisível para a flecha.
-    -->
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -48,10 +45,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <!--
-            PASSO 3: AUMENTEI A MARGEM DO PRIMEIRO CAMPO
-            Para que o texto "Email" não fique escondido atrás da logo.
-        -->
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/email_layout_create"
             style="@style/Widget.App.TextInputLayout"
@@ -74,7 +68,7 @@
                 android:textColor="#FFFFFF" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- O resto dos seus campos continua igual... -->
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/usuario_layout_create"
             style="@style/Widget.App.TextInputLayout"

@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="176dp"
-    android:background="@drawable/bg_gradiente"
+    android:background="@android:color/black"
     android:gravity="bottom"
     android:orientation="vertical"
     android:padding="16dp"
@@ -11,18 +11,20 @@
     <ImageView
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:src="@drawable/logo" />
+        android:src="@drawable/ic_usuario" />
 
     <TextView
+        android:id="@+id/nav_header_username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="8dp"
-        android:text="Seu Nome"
+        android:text="SyncMeet"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
     <TextView
+        android:id="@+id/nav_header_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="seu.email@example.com" />
+        android:text="seu_email@exemplo.com" />
 
 </LinearLayout>

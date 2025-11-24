@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_gradiente">
+
+    <ImageView
+        android:id="@+id/logo_main"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/logo"
+        android:contentDescription="@string/logo_do_aplicativo_syncmeet"
+        android:elevation="1dp"
+        android:layout_marginTop="-50dp"
+        app:layout_constraintBottom_toTopOf="@+id/botao_criar_evento"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Criar Evento"
+        android:textColor="#FFFFFF"
+        android:textSize="40dp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/open_sans_bold"/>
+
+  tInputLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

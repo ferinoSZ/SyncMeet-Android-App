@@ -163,14 +163,16 @@
         <!-- Criar Nova Conta -->
         <TextView
             android:id="@+id/criar_nova_conta"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/open_sans_regular"
             android:text="@string/criar_nova_conta"
             android:textColor="#a78bfa"
-            android:textSize="13sp"
-            android:fontFamily="@font/open_sans_regular"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="150dp"/>
+            android:textSize="13sp" />
 
 
 

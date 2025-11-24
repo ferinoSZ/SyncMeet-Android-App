@@ -1,21 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
+
         <item
-            android:id="@+id/nav_profile"
-            android:icon="@drawable/ic_menu" 
-            android:title="Meu Perfil" />
+            android:id="@+id/nav_eventos_agendados"
+            android:title="EVENTOS AGENDADOS"
+            android:icon="@drawable/ic_calendario"/>
         <item
-            android:id="@+id/nav_events"
-            android:icon="@drawable/ic_calendario"
-            android:title="EVENTOS AGENDADOS" />
-        <item
-            android:id="@+id/nav_settings"
-            android:icon="@drawable/ic_historico"
-            android:title="HISTÓRICO DE EVENTOS" />
-        <item
-            android:id="@+id/nav_logout"
-            android:icon="@drawable/ic_menu"
-            android:title="Sair" />
+            android:id="@+id/nav_historico"
+            android:title="HISTÓRICO DE EVENTOS"
+            android:icon="@drawable/ic_historico"/>
     </group>
 </menu>

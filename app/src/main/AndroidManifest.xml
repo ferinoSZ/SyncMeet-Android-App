@@ -11,6 +11,36 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SyncMeet">
 
+        <!-- Activity de Detalhe da Edição -->
+        <activity
+            android:name=".EditarEventoDetailActivity"
+            android:exported="false"
+            android:parentActivityName=".EditarEventoActivity" />
+
+        <!-- Activity de Detalhe do Histórico -->
+        <activity
+            android:name=".HistoricoEventoDetailActivity"
+            android:exported="false"
+            android:parentActivityName=".HistoricoEventoActivity" />
+
+        <!-- Activity de Agenda de Eventos -->
+        <activity
+            android:name=".AgendaEventoActivity"
+            android:exported="false"
+            android:parentActivityName=".TelaPrincipalActivity" />
+
+        <!-- Activity de Histórico de Eventos -->
+        <activity
+            android:name=".HistoricoEventoActivity"
+            android:exported="false"
+            android:parentActivityName=".TelaPrincipalActivity" />
+
+        <!-- Activity de Edição de Evento -->
+        <activity
+            android:name=".EditarEventoActivity"
+            android:exported="false"
+            android:parentActivityName=".TelaPrincipalActivity" />
+
         <!-- Activity de Criação de Evento -->
         <activity
             android:name=".CriarEventoActivity"

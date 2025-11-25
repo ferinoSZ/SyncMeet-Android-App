@@ -5,6 +5,7 @@ import android.app.TimePickerDialog;
 import android.os.Bundle;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TimePicker;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +20,7 @@ public class CriarEventoActivity extends AppCompatActivity {
     private EditText localEventoEditText;
     private EditText dataEventoEditText;
     private EditText horaEventoEditText;
+    private ImageView backArrow;
     private final Calendar myCalendar = Calendar.getInstance();
 
     @Override
@@ -30,6 +32,13 @@ public class CriarEventoActivity extends AppCompatActivity {
         localEventoEditText = findViewById(R.id.local_evento);
         dataEventoEditText = findViewById(R.id.data_evento);
         horaEventoEditText = findViewById(R.id.hora_evento);
+        backArrow = findViewById(R.id.back_arrow);
+
+        // --- Lógica do Botão Voltar ---
+        backArrow.setOnClickListener(v -> {
+            // Fecha a activity atual e retorna para a anterior (TelaPrincipalActivity)
+            finish();
+        });
 
         // --- Configuração do DatePickerDialog ---
         DatePickerDialog.OnDateSetListener date = (view, year, month, dayOfMonth) -> {

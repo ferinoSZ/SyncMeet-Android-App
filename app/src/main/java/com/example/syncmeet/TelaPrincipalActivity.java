@@ -23,6 +23,8 @@ public class TelaPrincipalActivity extends AppCompatActivity {
     private ImageView menuIcon;
     private TextView navFooterSair;
     private Button botaoCriarEvento;
+    private Button botaoEditarEvento;
+    private Button botaoExcluirEvento;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,8 @@ public class TelaPrincipalActivity extends AppCompatActivity {
         menuIcon = findViewById(R.id.menu_icon);
         navFooterSair = findViewById(R.id.nav_footer_sair);
         botaoCriarEvento = findViewById(R.id.botao_criar_evento);
+        botaoEditarEvento = findViewById(R.id.botao_edit_evento);
+        botaoExcluirEvento = findViewById(R.id.botao_exclui_evento);
 
         // --- Início da atualização do Header ---
 
@@ -54,7 +58,6 @@ public class TelaPrincipalActivity extends AppCompatActivity {
 
         // --- Fim da atualização do Header ---
 
-        // Abrir o drawer ao clicar no ícone de menu
         menuIcon.setOnClickListener(v -> {
             if (drawerLayout.isDrawerOpen(GravityCompat.END)) {
                 drawerLayout.closeDrawer(GravityCompat.END);
@@ -63,19 +66,21 @@ public class TelaPrincipalActivity extends AppCompatActivity {
             }
         });
 
-        // Lidar com cliques nos itens do menu
         navigationView.setNavigationItemSelectedListener(item -> {
             int id = item.getItemId();
             if (id == R.id.nav_eventos_agendados) {
-                Toast.makeText(TelaPrincipalActivity.this, "Eventos Agendados Clicado", Toast.LENGTH_SHORT).show();
+                // --- Abrir a tela de Eventos Agendados ---
+                Intent agendaIntent = new Intent(TelaPrincipalActivity.this, AgendaEventoActivity.class);
+                startActivity(agendaIntent);
             } else if (id == R.id.nav_historico) {
-                Toast.makeText(TelaPrincipalActivity.this, "Histórico de Eventos Clicado", Toast.LENGTH_SHORT).show();
+                // --- Abrir a tela de Histórico de Eventos ---
+                Intent historicoIntent = new Intent(TelaPrincipalActivity.this, HistoricoEventoActivity.class);
+                startActivity(historicoIntent);
             }
             drawerLayout.closeDrawer(GravityCompat.END);
             return true;
         });
 
-        // Lidar com o clique no botão Sair do rodapé
         navFooterSair.setOnClickListener(v -> {
             Intent logoutIntent = new Intent(TelaPrincipalActivity.this, MainActivity.class);
             logoutIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -83,10 +88,14 @@ public class TelaPrincipalActivity extends AppCompatActivity {
             finish();
         });
 
-        // --- Abrir a tela de Criar Evento ---
         botaoCriarEvento.setOnClickListener(v -> {
             Intent criarEventoIntent = new Intent(TelaPrincipalActivity.this, CriarEventoActivity.class);
             startActivity(criarEventoIntent);
+        });
+
+        botaoEditarEvento.setOnClickListener(v -> {
+            Intent editarEventoIntent = new Intent(TelaPrincipalActivity.this, EditarEventoActivity.class);
+            startActivity(editarEventoIntent);
         });
     }
 

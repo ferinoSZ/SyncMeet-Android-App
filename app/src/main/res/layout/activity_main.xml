@@ -12,8 +12,6 @@
         android:id="@+id/image_logo"
         android:layout_width="350dp"
         android:layout_height="350dp"
-
-
         android:layout_marginBottom="-135dp"
         android:elevation="1dp"
         android:contentDescription="@string/logo_do_aplicativo_syncmeet"
@@ -120,13 +118,17 @@
                     app:thumbTint="@color/white"
                     app:trackTint="@color/seletor_switch" />
                 <TextView
+                    android:id="@+id/lembrar_texto"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="0dp"
                     android:text="@string/lembrar_de_mim"
                     android:textColor="@color/white"
                     android:textSize="13sp"
-                    android:fontFamily="@font/open_sans_regular"/>
+                    android:fontFamily="@font/open_sans_regular"
+                    app:layout_constraintEnd_toEndOf="@+id/esqueceu_senha"
+                    app:layout_constraintStart_toStartOf="@+id/esqueceu_senha"
+                    app:layout_constraintTop_toBottomOf="@+id/esqueceu_senha"/>
 
             </LinearLayout>
 
@@ -140,9 +142,10 @@
                 android:textSize="13sp"
                 android:fontFamily="@font/open_sans_regular"
                 android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"/>
-
-
+                android:layout_centerVertical="true"
+                app:layout_constraintEnd_toEndOf="@+id/lembrar_texto"
+                app:layout_constraintStart_toStartOf="@+id/lembrar_texto"
+                app:layout_constraintTop_toBottomOf="@+id/lembrar_texto"/>
 
         </RelativeLayout>
 

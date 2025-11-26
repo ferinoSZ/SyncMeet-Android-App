@@ -8,7 +8,7 @@
     android:background="@drawable/bg_gradiente"
     tools:context=".CriarContaActivity">
 
-
+    <!-- Botão de voltar em cima -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -19,7 +19,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-
+    <!-- Logo -->
     <ImageView
         android:id="@+id/image_logo"
         android:layout_width="350dp"
@@ -32,6 +32,7 @@
         app:layout_constraintEnd_toEndOf="@+id/container_cadastro"
         app:layout_constraintStart_toStartOf="@+id/container_cadastro" />
 
+    <!-- Container do cadastro -->
     <LinearLayout
         android:id="@+id/container_cadastro"
         android:layout_width="350dp"
@@ -45,7 +46,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-
+        <!-- Email -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/email_layout_create"
             style="@style/Widget.App.TextInputLayout"
@@ -69,6 +70,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
 
+        <!-- Usuário -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/usuario_layout_create"
             style="@style/Widget.App.TextInputLayout"
@@ -91,6 +93,7 @@
                 android:textColor="#FFFFFF" />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <!-- Senha -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/password_layout_create"
             style="@style/Widget.App.TextInputLayout"
@@ -113,6 +116,7 @@
                 android:textColor="#FFFFFF" />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <!-- Repetir senha -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/confirm_password_layout_create"
             style="@style/Widget.App.TextInputLayout"
@@ -135,6 +139,7 @@
                 android:textColor="#FFFFFF" />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <!-- Botão de cadastro -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/register_button"
             android:layout_width="match_parent"

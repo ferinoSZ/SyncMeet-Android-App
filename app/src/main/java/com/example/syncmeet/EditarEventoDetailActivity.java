@@ -43,8 +43,8 @@ public class EditarEventoDetailActivity extends AppCompatActivity {
 
         // Lógica para salvar as alterações
         salvarButton.setOnClickListener(v -> {
-            // Aqui você adicionaria a lógica para salvar os dados no banco de dados ou onde quer que eles estejam armazenados.
-            // Por enquanto, apenas exibimos uma mensagem e fechamos a tela.
+            // Aqui você adiciona lógica para salvar os dados no banco de dados.
+            // Exibimos uma mensagem e fechamos a tela.
 
             Toast.makeText(EditarEventoDetailActivity.this, "Alterações salvas!", Toast.LENGTH_SHORT).show();
             finish(); // Volta para a lista de eventos

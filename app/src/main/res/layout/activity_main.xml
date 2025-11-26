@@ -20,6 +20,7 @@
         app:layout_constraintEnd_toEndOf="@+id/container"
         app:layout_constraintStart_toStartOf="@+id/container"/>
 
+    <!-- Container do login -->
     <LinearLayout
         android:id="@+id/container"
         android:layout_width="350dp"
@@ -91,7 +92,7 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-
+        <!-- Lembrar de mim -->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -116,6 +117,8 @@
                     android:checked="false"
                     app:thumbTint="@color/white"
                     app:trackTint="@color/seletor_switch" />
+
+                <!-- Texto lembrar de mim -->
                 <TextView
                     android:id="@+id/lembrar_texto"
                     android:layout_width="wrap_content"
@@ -134,6 +137,7 @@
 
         </RelativeLayout>
 
+        <!--Botão de login -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/login_button"
             android:layout_width="match_parent"

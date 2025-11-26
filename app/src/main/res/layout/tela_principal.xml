@@ -7,13 +7,14 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context=".TelaPrincipalActivity"
-    tools:openDrawer="start">
+    tools:openDrawer="end">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/bg_gradiente">
 
+        <!-- Botão para abrir o DrawerMenu -->
         <ImageView
             android:id="@+id/menu_icon"
             android:layout_width="50dp"
@@ -25,6 +26,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <!-- Logo -->
         <ImageView
             android:id="@+id/logo_main"
             android:layout_width="250dp"
@@ -39,6 +41,7 @@
             app:layout_constraintVertical_bias="0.3"
             app:layout_constraintVertical_chainStyle="packed" />
 
+        <!-- Botão para criar evento -->
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/botao_criar_evento"
             android:layout_width="250dp"
@@ -56,6 +59,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/logo_main" />
 
+        <!-- Botão para editar evento -->
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/botao_edit_evento"
             android:layout_width="250dp"
@@ -73,6 +77,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/botao_criar_evento" />
 
+        <!-- Botão para excluir evento -->
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/botao_exclui_evento"
             android:layout_width="250dp"
@@ -91,6 +96,7 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <!-- DrawerMenu -->
     <LinearLayout
         android:layout_width="340dp"
         android:layout_height="match_parent"

@@ -40,7 +40,7 @@ public class CriarEventoActivity extends AppCompatActivity {
             finish();
         });
 
-        // --- Configuração do DatePickerDialog ---
+        // --- Configuração do input de data (vai abrir um calendário) ---
         DatePickerDialog.OnDateSetListener date = (view, year, month, dayOfMonth) -> {
             myCalendar.set(Calendar.YEAR, year);
             myCalendar.set(Calendar.MONTH, month);
@@ -56,7 +56,7 @@ public class CriarEventoActivity extends AppCompatActivity {
                     myCalendar.get(Calendar.DAY_OF_MONTH)).show();
         });
 
-        // --- Configuração do TimePickerDialog ---
+        // --- Configuração do Relógio (Vai abrir um relógio) ---
         TimePickerDialog.OnTimeSetListener time = (view, hourOfDay, minute) -> {
             myCalendar.set(Calendar.HOUR_OF_DAY, hourOfDay);
             myCalendar.set(Calendar.MINUTE, minute);

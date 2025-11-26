@@ -5,6 +5,8 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg_gradiente">
 
+
+    <!-- Botão de voltar com a flecha -->
     <ImageView
         android:id="@+id/back_arrow"
         android:layout_width="wrap_content"
@@ -16,6 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Logo do aplicativo -->
     <ImageView
         android:id="@+id/logo_main"
         android:layout_width="250dp"
@@ -27,6 +30,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Título -->
     <TextView
         android:id="@+id/editar_evento_title"
         android:layout_width="wrap_content"
@@ -41,6 +45,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo_main" />
 
+    <!-- Container dos eventos listados -->
     <LinearLayout
         android:id="@+id/container"
         android:layout_width="350dp"
@@ -57,6 +62,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editar_evento_title">
 
+        <!-- ScrollView é rolagem pra baixo -->
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -64,12 +70,14 @@
             android:scrollbarStyle="insideInset"
             android:scrollbars="vertical">
 
+            <!-- Lista de eventos -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
 
+                <!-- Cada com.google... é um evento -->
                 <com.google.android.material.button.MaterialButton
                     android:layout_width="match_parent"
                     android:layout_height="60dp"

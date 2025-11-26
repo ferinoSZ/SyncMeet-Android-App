@@ -69,11 +69,9 @@ public class TelaPrincipalActivity extends AppCompatActivity {
         navigationView.setNavigationItemSelectedListener(item -> {
             int id = item.getItemId();
             if (id == R.id.nav_eventos_agendados) {
-                // --- Abrir a tela de Eventos Agendados ---
                 Intent agendaIntent = new Intent(TelaPrincipalActivity.this, AgendaEventoActivity.class);
                 startActivity(agendaIntent);
             } else if (id == R.id.nav_historico) {
-                // --- Abrir a tela de Histórico de Eventos ---
                 Intent historicoIntent = new Intent(TelaPrincipalActivity.this, HistoricoEventoActivity.class);
                 startActivity(historicoIntent);
             }
@@ -81,6 +79,7 @@ public class TelaPrincipalActivity extends AppCompatActivity {
             return true;
         });
 
+        // --- Botão de sair no Drawer ---
         navFooterSair.setOnClickListener(v -> {
             Intent logoutIntent = new Intent(TelaPrincipalActivity.this, MainActivity.class);
             logoutIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -88,14 +87,22 @@ public class TelaPrincipalActivity extends AppCompatActivity {
             finish();
         });
 
+        // --- Abrir a tela de Criar Evento ---
         botaoCriarEvento.setOnClickListener(v -> {
             Intent criarEventoIntent = new Intent(TelaPrincipalActivity.this, CriarEventoActivity.class);
             startActivity(criarEventoIntent);
         });
 
+        // --- Abrir a tela de Editar Evento ---
         botaoEditarEvento.setOnClickListener(v -> {
             Intent editarEventoIntent = new Intent(TelaPrincipalActivity.this, EditarEventoActivity.class);
             startActivity(editarEventoIntent);
+        });
+
+        // --- Abrir a tela de Excluir Evento ---
+        botaoExcluirEvento.setOnClickListener(v -> {
+            Intent excluirEventoIntent = new Intent(TelaPrincipalActivity.this, ExcluirEventoActivity.class);
+            startActivity(excluirEventoIntent);
         });
     }
 

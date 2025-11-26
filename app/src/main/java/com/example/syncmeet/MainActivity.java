@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 // Criar o Intent para a próxima tela
                 Intent intent = new Intent(MainActivity.this, TelaPrincipalActivity.class);
 
+                // Aqui, quando a pessoa logar, o nome daquele Drawer vai ser substituído automaticamente pelo e-mail e usuário cadastrado
                 // Passar os dados para a TelaPrincipalActivity
                 // Usaremos o mesmo valor para nome de usuário e e-mail, como placeholder
                 intent.putExtra("USERNAME", emailOrUsername); // Você pode ajustar para um nome de usuário real

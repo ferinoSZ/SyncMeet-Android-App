@@ -28,14 +28,14 @@ public class CriarContaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.criar_conta);
 
-        // --- Configuração da Toolbar (flecha de voltar) ---
+        // --- Configuração do botão de voltar (as flechas) ---
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setDisplayShowTitleEnabled(false);
         }
-        // --- Fim da configuração da Toolbar ---
+        // --- Fim da configuração do botão de voltar ---
 
         // 2. Encontre os componentes no layout usando findViewById
         emailLayout = findViewById(R.id.email_layout_create);
@@ -112,8 +112,8 @@ public class CriarContaActivity extends AppCompatActivity {
         // Se todos os campos passaram na validação (isValid continuou true)
         if (isValid) {
             // Ação de sucesso!
-            // Aqui você colocaria o código para salvar o usuário no banco de dados, etc.
-            // Por enquanto, vamos apenas mostrar uma mensagem de sucesso.
+            // Aqui você coloca o código para salvar o usuário no banco de dados.
+            // Aqui mostra uma mensagem de sucesso.
             Toast.makeText(this, "Cadastro realizado com sucesso!", Toast.LENGTH_SHORT).show();
         }
     }

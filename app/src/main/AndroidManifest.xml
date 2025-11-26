@@ -11,6 +11,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SyncMeet">
 
+        <!-- Activity de Exclusão de Evento -->
+        <activity
+            android:name=".ExcluirEventoActivity"
+            android:exported="false"
+            android:parentActivityName=".TelaPrincipalActivity" />
+
         <!-- Activity de Detalhe da Edição -->
         <activity
             android:name=".EditarEventoDetailActivity"

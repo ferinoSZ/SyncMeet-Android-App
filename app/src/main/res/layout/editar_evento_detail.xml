@@ -7,6 +7,7 @@
     android:background="@drawable/bg_gradiente"
     tools:context=".EditarEventoDetailActivity">
 
+    <!-- Botão voltar -->
     <ImageView
         android:id="@+id/back_arrow"
         android:layout_width="wrap_content"
@@ -18,6 +19,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Logo -->
     <ImageView
         android:id="@+id/logo_main"
         android:layout_width="250dp"
@@ -28,6 +30,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Título -->
     <TextView
         android:id="@+id/detalhe_title"
         android:layout_width="300dp"
@@ -42,6 +45,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/logo_main" />
 
+    <!-- Nome do evento, vai ser substituído automaticamente pelo nome do evento selecionado -->
     <EditText
         android:id="@+id/detalhe_nome_evento"
         android:layout_width="200dp"
@@ -182,6 +186,7 @@
         </LinearLayout>
     </LinearLayout>
 
+    <!-- Botão de salvar alterações -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/salvar_edicao_button"
         android:layout_width="300dp"
